@@ -1,111 +1,111 @@
 # Numerical Methods & Optimization Library
 
-Python implementation of numerical methods and optimization algorithms.
+Реализация алгоритмов численных методов и оптимизации на Python.
 
-## Languages
+## Языки (Languages)
 
 - [English](README.md)
 - [Русский](README_RU.md)
 
-## Results
+## Результаты
 
-### Optimization Methods
+### Методы оптимизации
 
 <div align="center">
   <img src="images/optimization_multidimensional/blind_search_isosurfaces_3d.png" width="600">
   <br>
-  <em>Isosurface visualization in multidimensional space for generalized blind search algorithm</em>
+  <em>Визуализация изоповерхностей в многомерном пространстве для обобщенного алгоритма слепого поиска</em>
 </div>
 
 <div align="center">
   <img src="images/optimization_multidimensional/blind_search_isotropic_function_from_local_extremum_to_global_extremum.png" width="600">
   <br>
-  <em>Convergence to global optimum from local minimum on anisotropic function</em>
+  <em>Сходимость к глобальному оптимуму, начиная с локального, на анизотропной функции</em>
 </div>
 
-### Partial Differential Equations
+### Уравнения в частных производных
 
 <div align="center">
   <img src="images/differential_equations/pde_wave_equation.gif" width="600">
   <br>
-  <em>Wave equation solution animation using finite difference method</em>
+  <em>Анимация решения волнового уравнения методом сеток</em>
 </div>
 
 <div align="center">
   <img src="images/differential_equations/pde_one_dimension_parabolic_mixed_problem_heat_equation.png" width="600">
   <br>
-  <em>1D parabolic equation solution (mixed boundary problem)</em>
+  <em>Решение одномерного параболического уравнения (смешанная задача)</em>
 </div>
 
 <div align="center">
   <img src="images/differential_equations/runge-kutta_euler_adams-runge_adams-euler_comparison.png" width="600">
   <br>
-  <em>Comparison of differential equation solving methods</em>
+  <em>Сравнение методов решения дифференциальных уравнений</em>
 </div>
 
-### Interpolation & Approximation
+### Интерполяция и аппроксимация
 
 <div align="center">
   <img src="images/interpolation/cubic_splines.png" width="600">
   <br>
-  <em>Data interpolation using cubic splines</em>
+  <em>Интерполяция данных кубическими сплайнами</em>
 </div>
 
 <div align="center">
   <img src="images/approximation/discrete_LSM_least_squares_method.png" width="600">
   <br>
-  <em>Data approximation with discrete least squares method</em>
+  <em>Аппроксимация данных дискретным МНК</em>
 </div>
 
-### Nonlinear Equations Systems
+### Системы нелинейных уравнений
 
 <div align="center">
   <img src="images/system_of_non_linear_equations/newton_simple_iteration.png" width="600">
   <br>
-  <em>Nonlinear system solution using Newton's method</em>
+  <em>Решение системы нелинейных уравнений методом Ньютона</em>
 </div>
 
-## Project Structure
+## Структура проекта
 
-### Modeling
+### Моделирование
 
-- Diffusion and transport equation solvers (Roberts, Gaussian model, Euler, UpWind)
-- Explicit and implicit schemes for PDEs
-- Crank-Nicolson method for semi-empirical equations
+- Методы решения уравнений диффузии и переноса (Робертса, Гауссова модель, Эйлера, UpWind)
+- Явные и неявные схемы для ДУЧП
+- Метод Кранка-Николсона для полуэмпирических уравнений
 
-### Numerical Methods
+### Численные методы
 
-- **Approximation**: LSM (discrete and integral)
-- **ODEs/PDEs**: Cauchy problems, boundary problems (Thomas algorithm), hyperbolic and parabolic equations, Dirichlet problem for Laplace equation
-- **Differentiation**: Runge 2nd order method
-- **Nonlinear equations**: Newton, simple iteration, dichotomy
-- **Nonlinear systems**: Newton, simple iteration
-- **Interpolation**: Lagrange (equidistant/non-equidistant nodes), Newton, cubic splines
-- **Integration**: rectangles, trapezoids, Simpson
+- **Аппроксимация**: МНК (дискретный и интегральный)
+- **ДУ/ДУЧП**: задачи Коши, краевые задачи (прогонка Томаса), гиперболические и парабоические ДУ, задача Дирихле для ДУЧП Лапласа
+- **Дифференцирование**: метод Рунге 2 порядка точности
+- **Нелинейные уравнения**: методы Ньютона, простой итерации, дихотомии
+- **Системы нелинейных уравнений**: методы Ньютона, простой итерации
+- **Интерполяция**: Лагранж (для равноотстоящих и неравноотстоящих узлов), Ньютон, кубические сплайны
+- **Интегрирование**: прямоугольники, трапеции, Симпсон
 
-### Optimization
+### Оптимизация
 
-- **Extremum search**: bisection, Fibonacci, golden section, quadratic/cubic interpolation, scanning
-- **Multidimensional optimization**:
-  - Gradient method
-  - Conjugate gradients
-  - Gauss-Seidel
-  - Rosenbrock method
-  - Pairwise probe (classical, stochastic)
-  - Custom pairwise probe with direction batching
-  - Random directions
-  - Blind search
-  - Random penalty search
+- **Поиск экстремума**: дихотомия, Фибоначчи, золотое сечение, квадратичная и кубическая интерполяция, сканирование
+- **Многомерная оптимизация**:
+  - Градиентный метод
+  - Метод сопряженных градиентов
+  - Гаусса-Зейделя
+  - Метод Розенброка
+  - Парная проба (классическая, случайная)
+  - Кастомная парная проба с батчем направлений
+  - Случайные направления
+  - Слепой поиск
+  - Наказание случайностью
 
-## Features
+## Фишки
 
-- Generalized algorithms for N-dimensional cases
-- My modification of pairwise probe: batching N samples with best direction selection
-- Algorithms with usage examples + visualization
-- 40+ implemented methods
-- Pure Python + NumPy/SciPy + Matplotlib
+- Есть обобщенные алгоритмы для N-мерных случаев
+- Моя модификация метода парной пробы: батчинг из N сэмплов с выбором наилучшего
+- Алгоритмы с примерами использования + визуализация
+- Их много: больше 40
+- Чистый Python + NumPy/SciPy и Matplotlib
 
-## Usage
+## Использование
 
 ```bash
 pip install -r requirements.txt
