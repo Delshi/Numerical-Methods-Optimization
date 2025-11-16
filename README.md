@@ -12,6 +12,12 @@
   <em>Визуализация изоповерхностей в многомерном пространстве для обобщенного алгоритма слепого поиска</em>
 </div>
 
+<div align="center">
+  <img src="images/optimization_multidimensional/blind_search_isotropic_function_from_local_extremum_to_global_extremum.png" width="600">
+  <br>
+  <em>Сходимость к глобальному оптимуму, начиная с локального, на анизотропной функции</em>
+</div>
+
 ### Уравнения в частных производных
 
 <div align="center">
